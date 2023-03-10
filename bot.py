@@ -25,6 +25,12 @@ def start(update, context):
     """Send a message when the command /start is issued."""
 
     update.message.reply_text('Your Key is : 92iwissjwiwjjswi!')
+    
+def getkey(update, context):
+
+    """Send a message when the command /start is issued."""
+
+    update.message.reply_text('Your Key is : d9ekejwisj8w2828iuwjsjssw9w99w kontol')    
 
 def help(update, context):
 
@@ -64,7 +70,9 @@ def main():
     # on different commands - answer in Telegram
 
     dp.add_handler(CommandHandler("start", start))
-
+  
+    dp.add_handler(CommandHandler("getkey", getkey))
+   
     dp.add_handler(CommandHandler("help", help))
 
     dp.add_handler(MessageHandler(Filters.text, echo))
