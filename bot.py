@@ -14,7 +14,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-TOKEN = 'YOURTELEGRAMBOTTOKEN'
+TOKEN = '6243313551:AAHpHKw2V68nMCgHMWmAZa7Cg0NjprnLHyE'
 
 # Define a few command handlers. These usually take the two arguments update and
 
@@ -82,7 +82,7 @@ def main():
 
                           url_path=TOKEN)
 
-    updater.bot.setWebhook('https://yourherokuappname.herokuapp.com/' + TOKEN)
+    updater.bot.setWebhook('https://pythonserverbot.herokuapp.com/' + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
 
