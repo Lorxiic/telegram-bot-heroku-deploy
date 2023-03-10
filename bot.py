@@ -44,12 +44,7 @@ def error(update, context):
 
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
-    def getkey(update, context):
-
-    """Send a message when the command /help is issued."""
-
-    update.message.reply_text('This Your Key : 0018u38382hrd')
-    
+        
 def main():
 
     """Start the bot."""
@@ -74,9 +69,7 @@ def main():
 
     dp.add_handler(MessageHandler(Filters.text, echo))
 
-    dp.add_handler(CommandHandler("getkey", getkey))
-
-  
+    
 
     # log all errors
 
