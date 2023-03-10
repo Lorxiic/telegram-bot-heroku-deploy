@@ -24,7 +24,7 @@ def start(update, context):
 
     """Send a message when the command /start is issued."""
 
-    update.message.reply_text('Hi!')
+    update.message.reply_text('Your Key is : 92iwissjwiwjjswi!')
 
 def help(update, context):
 
