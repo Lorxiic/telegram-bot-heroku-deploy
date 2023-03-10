@@ -43,11 +43,7 @@ def error(update, context):
     """Log Errors caused by Updates."""
 
     logger.warning('Update "%s" caused error "%s"', update, context.error)
-def getkey(update, context):
 
-    """Send a message when the command /help is issued."""
-
-    update.message.reply_text('This Your Key : 0018u38382hrd')
 def main():
 
     """Start the bot."""
@@ -69,8 +65,6 @@ def main():
     dp.add_handler(CommandHandler("start", start))
 
     dp.add_handler(CommandHandler("help", help))
-dp.add_handler(CommandHandler("getkey", getkey))
-    # on noncommand i.e message - echo the message on Telegram
 
     dp.add_handler(MessageHandler(Filters.text, echo))
 
