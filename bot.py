@@ -81,13 +81,12 @@ def main():
     dp = updater.dispatcher
 
     # on different commands - answer in Telegram
-dp.add_handler(CommandHandler("res", response))
 
 
     dp.add_handler(CommandHandler("start", start))
   
     dp.add_handler(CommandHandler("getkey", getkey))
-   
+   dp.add_handler(CommandHandler("res", response))
     dp.add_handler(CommandHandler("help", help))
 
     dp.add_handler(MessageHandler(Filters.text, echo))
