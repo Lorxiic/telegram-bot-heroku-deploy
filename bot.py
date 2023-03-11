@@ -25,12 +25,7 @@ TOKEN = '6243313551:AAHpHKw2V68nMCgHMWmAZa7Cg0NjprnLHyE'
 # context. Error handlers also receive the raised TelegramError object in error.
 url = 'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
 
-def response(url):
 
-    with urllib.request.urlopen(url) as response:
-
-        return response.read()
-      
 def start(update, context):
 
     """Send a message when the command /start is issued."""
@@ -44,7 +39,13 @@ def getkey(update, context):
     res = response(url)
 
     update.message.reply_text(json.loads(res) + "tot")    
-    
+    def response(url):
+
+    with urllib.request.urlopen(url) as response:
+
+        return response.read()
+
+      
 def help(update, context):
 
     """Send a message when the command /help is issued."""
