@@ -34,7 +34,7 @@ def getkey(update, context):
 
     """Send a message when the command /start is issued."""
 
-    url = ""
+    url = "http://api.tvmaze.com/singlesearch/shows"
     show = input("please a show name")
     params = {"q":show}
     response = requests(url,params)
