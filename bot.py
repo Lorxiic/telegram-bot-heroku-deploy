@@ -37,7 +37,7 @@ def getkey(update, context):
     url = "http://api.tvmaze.com/singlesearch/shows"
     show = input("please a show name")
     params = {"q":show}
-    response = requests(url,params)
+    response = requests.get(url,params)
     if response.status_code == 200:
       data = json.loads(response.txt)
     update.message.reply_text(data)    
