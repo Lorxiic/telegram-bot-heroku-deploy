@@ -34,13 +34,8 @@ def getkey(update, context):
 
     """Send a message when the command /start is issued."""
 
-    url = "http://api.tvmaze.com/singlesearch/shows"
-    show = input("please a show name")
-    params = {"q":show}
-    response = requests.get(url,params)
-    if response.status_code == 200:
-      data = json.loads(response.txt)
-    update.message.reply_text(data)    
+    
+    update.message.reply_text('aiaj')    
     
 
       
