@@ -2,7 +2,8 @@ import logging
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-
+import request
+import json
 
 import os
 
@@ -33,8 +34,13 @@ def getkey(update, context):
 
     """Send a message when the command /start is issued."""
 
-    
-    update.message.reply_text(json.loads(res) + "tot")    
+    url = ""
+    show = input("please a show name")
+    params = {"q":show}
+    response = requests(url,params)
+    if response.status_code == 200:
+      data = json.loads(response.txt)
+    update.message.reply_text(data)    
     
 
       
