@@ -1,9 +1,7 @@
 import logging
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-import urllib.request
 
-import json
 
 
 import os
@@ -23,7 +21,6 @@ TOKEN = '6243313551:AAHpHKw2V68nMCgHMWmAZa7Cg0NjprnLHyE'
 # Define a few command handlers. These usually take the two arguments update and
 
 # context. Error handlers also receive the raised TelegramError object in error.
-url = 'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
 
 
 def start(update, context):
@@ -36,14 +33,9 @@ def getkey(update, context):
 
     """Send a message when the command /start is issued."""
 
-    res = response(url)
-
+    
     update.message.reply_text(json.loads(res) + "tot")    
-    def response(url):
-
-    with urllib.request.urlopen(url) as response:
-
-        return response.read()
+    
 
       
 def help(update, context):
@@ -85,7 +77,7 @@ def main():
 
 
     dp.add_handler(CommandHandler("start", start))
-  
+
     dp.add_handler(CommandHandler("getkey", getkey))
     dp.add_handler(CommandHandler("help", help))
 
