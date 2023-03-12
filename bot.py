@@ -40,9 +40,7 @@ def getkey(update, context):
     """Send a message when the command /start is issued."""
 
     
-r = requests.get(url='https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
 
-print(r.json())
     update.message.reply_text('aiaj')    
     
 
