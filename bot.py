@@ -3,8 +3,7 @@ import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import requests
 
-import requests
-
+    import requests
 import json
 
 
@@ -39,9 +38,22 @@ def getkey(update, context):
 
     """Send a message when the command /start is issued."""
 
-    
 
-    update.message.reply_text('aiaj')    
+
+
+url = "http://api.tvmaze.com/singlesearch/shows"
+show = input("Please input a show name.  ")
+params = {"q":show}
+
+response = requests.get(url, params)
+
+
+    data = json.loads(response.text)
+ 
+    
+    name = data['name']
+
+    update.message.reply_text(name)    
     
 
       
