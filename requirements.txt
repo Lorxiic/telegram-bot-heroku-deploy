@@ -3,6 +3,6 @@ certifi
 tornado>=5.1
 cryptography
 python-telegram-bot==12.7
-json==1.0.0
+
 requests==2.19.1
 urllib==1.23
