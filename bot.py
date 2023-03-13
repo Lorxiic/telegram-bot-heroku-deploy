@@ -38,15 +38,8 @@ def getkey(update, context):
 
 
 
-url = "http://api.tvmaze.com/singlesearch/shows"
-show = input("Please input a show name.  ")
-params = {"q":show}
 
-response = requests.get(url, params)
-
-
-
-    update.message.reply_text(response.text)    
+    update.message.reply_text("fjef")    
     
 
       
